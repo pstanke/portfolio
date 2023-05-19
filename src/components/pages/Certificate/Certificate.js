@@ -1,1 +1,3 @@
-export const Certificate = () => {};
+export const Certificate = () => {
+  return <h1>certificate</h1>;
+};
