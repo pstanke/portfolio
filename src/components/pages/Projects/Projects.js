@@ -47,8 +47,8 @@ export const Projects = () => {
 
       <Swipeable
         className
-        leftAction={() => handleProjectChange(activeProject - 1)}
-        rightAction={() => handleProjectChange(activeProject + 1)}
+        leftAction={() => handleProjectChange(activeProject + 1)}
+        rightAction={() => handleProjectChange(activeProject - 1)}
       >
         {projects
           .filter((project, index) => index === activeProject)

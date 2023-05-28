@@ -1,9 +1,12 @@
 import styles from './Home.module.scss';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Hero } from '../../layout/Hero/Hero';
+import { Footer } from '../../layout/Footer/Footer';
 export const Home = () => {
   return (
     <>
+      <Hero />
       <Row>
         <Col>
           <a
@@ -14,25 +17,32 @@ export const Home = () => {
             <img
               src={process.env.PUBLIC_URL + '/blobs/linkedinBlob.png'}
               alt='linkedInBlob'
-              className='img-fluid'
+              className='img-fluid overfow-hidden'
             />
           </a>
           <Link to={'/projects'}>
             <img
               src={process.env.PUBLIC_URL + '/blobs/projectsBlob.png'}
               alt='projectsBlob'
-              className={`${styles.projectsBlob} img-fluid`}
+              className={`${styles.projectsBlob} img-fluid `}
             />
           </Link>
           <Link to={'/certificate'}>
             <img
               src={process.env.PUBLIC_URL + '/blobs/certificateBlob.png'}
               alt='certificateBlob'
-              className={`${styles.certificateBlob} img-fluid`}
+              className={`${styles.certificateBlob} img-fluid `}
             />
           </Link>
         </Col>
         <Col>
+          <Link to={'/guide'}>
+            <img
+              src={process.env.PUBLIC_URL + '/blobs/guideBlob.png'}
+              alt='guideBlob'
+              className={`img-fluid `}
+            />
+          </Link>
           <img
             src={process.env.PUBLIC_URL + '/blobs/meBlob.png'}
             alt='meBlob'
@@ -47,6 +57,7 @@ export const Home = () => {
           </a>
         </Col>
       </Row>
+      <Footer />
     </>
   );
 };
