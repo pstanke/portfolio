@@ -1,8 +1,3 @@
-import linkedInBlob from './linkedinBlob.png';
-import meBlob from './meBlob.png';
-import projectsBlob from './projectsBlob.png';
-import gitHubBlob from './gitHubBlob.png';
-import certificateBlob from './certificateBlob.png';
 import styles from './Home.module.scss';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -16,18 +11,22 @@ export const Home = () => {
             target='_blank'
             rel='noreferrer'
           >
-            <img src={linkedInBlob} alt='linkedInBlob' className='img-fluid' />
+            <img
+              src={process.env.PUBLIC_URL + '/blobs/linkedinBlob.png'}
+              alt='linkedInBlob'
+              className='img-fluid'
+            />
           </a>
           <Link to={'/projects'}>
             <img
-              src={projectsBlob}
+              src={process.env.PUBLIC_URL + '/blobs/projectsBlob.png'}
               alt='projectsBlob'
               className={`${styles.projectsBlob} img-fluid`}
             />
           </Link>
           <Link to={'/certificate'}>
             <img
-              src={certificateBlob}
+              src={process.env.PUBLIC_URL + '/blobs/certificateBlob.png'}
               alt='certificateBlob'
               className={`${styles.certificateBlob} img-fluid`}
             />
@@ -35,13 +34,13 @@ export const Home = () => {
         </Col>
         <Col>
           <img
-            src={meBlob}
+            src={process.env.PUBLIC_URL + '/blobs/meBlob.png'}
             alt='meBlob'
             className={`${styles.meBlob} img-fluid`}
           />
           <a href='https://github.com/pstanke' target='_blank' rel='noreferrer'>
             <img
-              src={gitHubBlob}
+              src={process.env.PUBLIC_URL + '/blobs/gitHubBlob.png'}
               alt='gitHubBlob'
               className={`${styles.gitHubBlob} img-fluid`}
             />
